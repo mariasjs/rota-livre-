@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style-cd.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img class="logo" src="IMG/Rota livre.png">
+            <img  class="freepik" src="IMG/undraw_travelers_re_y25a (1).svg">
+        </div>
+        <div class="form-container">
+            <h2>Criar Conta</h2>
+            <p> Já tem conta? <a target="_blank" href="login.html"> Login </a> </p>
+            <form action="#">
+                <div class="input-group">
+                    <label for="nome"> Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="login" placeholder="Digite o seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="Digite o seu telefone" required>
+                </div>
+
+                <div class="input-group senha">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="input-group senha">
+                    <label for="Confirmarsenha">Confirmar Senha</label>
+                    <input type="password" id="Confirmarsenha" placeholder="Confirme a senha" required>
+                </div>
+
+                <div class="input-group">
+                  <button onclick="logar()"><a href="index.html" target="_blank"></a>Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div> 
+    <script>
+        function logar(){
+            var login = document.getElementById('login').value;
+            var telefone = document.getElementById('telefone').value;
+            var senha = document.getElementById('senha').value;
+            var senha2 = document.getElementById('Confirmarsenha').value;
+
+            if(login == "senha123@gmail.com" && telefone  =="98131127" && senha == "senha123" && senha2 == "senha123" ){
+                window.location.replace('Projeto (DW) - Viagens (mais atualizado)/index.html')
+            }else {
+                alert("Corrija seus dados!")
+            }
+        }
+    </script>
+</body>
+</html>
